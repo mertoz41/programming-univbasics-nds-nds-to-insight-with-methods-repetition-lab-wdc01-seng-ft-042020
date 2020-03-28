@@ -46,6 +46,7 @@ def total_gross(source)
   row_index = 0 
   while row_index < source.length do
     directors_name = directors_totals(source)[row_index]
+    binding.pry 
     big_total += directors_totals(source)[directors_name]
     binding.pry 
  end 
