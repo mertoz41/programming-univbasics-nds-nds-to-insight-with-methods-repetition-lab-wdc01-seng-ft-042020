@@ -42,12 +42,16 @@ end
 #h.each {|key, value| puts "#{key} is #{value}" }
 
 def total_gross(source)
+  listof_directors = list_of_directors(source)
   big_total = 0 
   row_index = 0 
   while row_index < source.length do
-    directors_name = directors_totals(source)[row_index]
+    directors_name = listof_directors[row_index]
+     
     big_total += directors_totals(source)[directors_name]
+    row_index += 1 
  end 
+ 
 big_total 
 end
 
